@@ -1,0 +1,14 @@
+{
+  "type": "module",
+  "dependencies": {
+    "firebase": "^9.9.1"
+  },
+  "name": "dba_atividade_aula_03",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

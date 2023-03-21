@@ -1,0 +1,1 @@
+Para funcionar os exercícios 2-2 e 2-3 é necessário substituir a chave de acesso ao nó, ambas foram geradas ao executar o exercício 2-1.
