@@ -5,7 +5,9 @@
       ".write":"root.child('users/' + auth.uid).hasChild('admin')"
     },
     "users": {
-      ".write": true
+      "$uid":{
+        ".write": "$uid === auth.uid"
+      }
     }
   }
 }

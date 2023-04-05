@@ -15,14 +15,19 @@ import {
 } from "firebase/database"
 
 function getOrderByChild(order,db,callback){
+    //Exemplo
     console.log(order);
     const refDB = ref(db,'produtos/');
     const consulta = query(refDB,orderByChild(order))
     onChildAdded(consulta,callback)
 }
 
-function getFilterByChild(filter,value, db,callback){
+function getFilterByChild(filter,value,db,callback){
     //implement aqui
+    console.log(filter)
+    const refDB = ref(db,'produtos/');
+    const consulta = query(refDB,orderByChild(filter),startAt(value));
+    onChildAdded(consulta,callback);
 }
 
 function getMostExpensive(db,setValue,list){
@@ -39,16 +44,24 @@ function getMostExpensive(db,setValue,list){
      * com arrays em JavaScript! Dica: usem reverse() ou unshift().
      * 
      *  */ 
-
-
+    const refDB = ref(db,'produtos/');
+    const consulta = query(refDB,orderByChild('preco')); 
+    onChildAdded(consulta,snap=>{
+       list.push(snap.val());
+    })
+    setValue(list.reverse());
 }
 
 function getMostCheap(db,callback){
-    //implemente aqui
+    const refDB = ref(db,'produtos/');
+    const consulta = query(refDB,orderByChild('preco'));
+    onChildAdded(consulta,callback);
 }
 
-function getPriceRange(value, db,callback){
-    //implemente aqui
+function getPriceRange(value,db,callback){//0--->limit
+    const refDB = ref(db,'produtos/');
+    const consulta = query(refDB,orderByChild('preco'),endAt(parseFloat(value)));
+    onChildAdded(consulta,callback);
 }
 
 export {getOrderByChild, getFilterByChild, getMostExpensive, getMostCheap, getPriceRange}
