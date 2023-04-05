@@ -45,13 +45,11 @@ function getMostExpensive(db,setValue,list){
      * 
      *  */ 
     const refDB = ref(db,'produtos/');
-    const consulta = query(refDB,orderByChild('preco'));
-    let array = [];
+    const consulta = query(refDB,orderByChild('preco')); 
     onChildAdded(consulta,snap=>{
-       array.push([snap.val()]);
-       list = array.reverse();
-       setValue([...list]);
+       list.push(snap.val());
     })
+    setValue(list.reverse());
 }
 
 function getMostCheap(db,callback){
@@ -62,7 +60,7 @@ function getMostCheap(db,callback){
 
 function getPriceRange(value,db,callback){//0--->limit
     const refDB = ref(db,'produtos/');
-    const consulta = query(refDB,orderByChild('preco'),endAt(value));
+    const consulta = query(refDB,orderByChild('preco'),endAt(parseFloat(value)));
     onChildAdded(consulta,callback);
 }
 
