@@ -1,0 +1,11 @@
+{
+  "rules": {
+    ".read": true,
+    "produtos": {
+      ".write":"root.child('users/' + auth.uid).hasChild('admin')"
+    },
+    "users": {
+      ".write": true
+    }
+  }
+}
