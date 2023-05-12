@@ -3,7 +3,7 @@ import { collection, getDocs, onSnapshot, updateDoc, doc, addDoc, deleteDoc } fr
 import { db } from './firebase.js';
 import './App.css';
 import * as React from 'react';
-import { Button, FormControl, Icon, InputLabel, Tab, RadioGroup, FormLabel, FormControlLabel, Radio } from '@mui/material'
+import { Button, FormControl, Icon, InputLabel, Tab, RadioGroup, FormLabel, FormControlLabel, Radio, IconButton, Collapse, Box, Typography } from '@mui/material'
 import EditNoteIcon from '@mui/icons-material/EditNote';
 import Input from '@mui/material/Input';
 import Table from '@mui/material/Table';
@@ -13,6 +13,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 function App(){
 
@@ -20,9 +22,6 @@ function App(){
   var coll = ""
   var result = ""
   var t = ""
-
-  const collectionEnt = collection(db, "entregadores");
-  const collectionUsu = collection(db, "usuarios");
 
   const [entregador, setEntregador] = useState({})
   const [entregadores, setEntregadores] = useState([])
@@ -34,6 +33,10 @@ function App(){
   const [nascimento, setNascimento] = useState("");
   const [tipo, setTipo] = useState("usuarios");
   const [editMode, setEditMode] = useState(false);
+  const [open, setOpen] = useState(false)
+
+  const collectionEnt = collection(db, "entregadores");
+  const collectionUsu = collection(db, "usuarios");
 
   useEffect(() => {
     const unsubEnt = onSnapshot(collectionEnt,()=>{getEntregadores()})
@@ -54,9 +57,11 @@ function App(){
             nome: doc.data().nome,
             cpf: doc.data().cpf,
             email: doc.data().email,
-            nascimento: doc.data().nascimento
+            nascimento: doc.data().nascimento,
+            veiculos: doc.data().veiculos
           })
         )
+        console.log(entregadores)
         setEntregadores(entregadores)
       }).catch(e =>
         console.error(e.message)
@@ -187,6 +192,9 @@ function App(){
           </Button></p>
         </fieldset>
       </form>
+
+
+
       <div className='Table'>
         <h3>Entregadores</h3>
         <TableContainer component={Paper} title='Entregadores'>
@@ -223,6 +231,9 @@ function App(){
           </Table>
         </TableContainer>
       </div>
+
+
+
       <div className='Table'>
         <h3>Usuários</h3>
         <TableContainer component={Paper}>
@@ -259,11 +270,36 @@ function App(){
           </Table>
         </TableContainer>
       </div>
+
+
+      <div className='Veiculos'>
+        <h3>Veículos</h3>
+        {entregadores.map(ent => (
+        <div className='Veiculo'>
+            {ent.veiculos ? 
+              <details className='Detalhes' style={{ display: 'inline' }}>
+                <summary>{ent.nome} | Id: {ent.id}</summary>
+                {ent.veiculos.map(vei => (
+                <details>
+                  <summary>{vei.marca} {vei.modelo}</summary>
+                  <ul>
+                      <li>{vei.marca}</li>
+                      <li>{vei.modelo}</li>
+                      <li>{vei.cilindradas} cilindradas</li>
+                      <li>Ano: {vei.ano}</li>
+                  </ul>
+                </details>
+                ))}
+              </details>
+            : ''}
+        </div>
+        ))}
+      </div>
+
     </div>
-      // <div>{todos.map((todo) => {
-      //   return(<h1>{todo.text}</h1>)
-      // })}
-      // </div>
   );
 }
+
+
+
 export default App;

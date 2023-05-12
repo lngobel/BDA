@@ -10,6 +10,17 @@ fieldset{
   margin: 40px;
 }
 
+.Veiculos {
+  margin: 40px;
+  width: auto;
+  text-align: center;
+}
+
+.Detalhes {
+  width: 40%;
+  margin: 10px;
+}
+
 fieldset>legend{
   padding-left: 20px;
   padding-right: 20px;
