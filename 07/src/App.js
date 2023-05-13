@@ -281,7 +281,14 @@ function App(){
                 <summary>{ent.nome} | Id: {ent.id}</summary>
                 {ent.veiculos.map(vei => (
                 <details>
-                  <summary>{vei.marca} {vei.modelo}</summary>
+                  <summary>{vei.marca} {vei.modelo}
+                    <Button color="primary">
+                      <EditNoteIcon/>
+                    </Button>
+                    <Button color="error">
+                      <Icon>delete_forever</Icon>
+                    </Button>
+                  </summary>
                   <ul>
                       <li>{vei.marca}</li>
                       <li>{vei.modelo}</li>

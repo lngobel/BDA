@@ -16,6 +16,17 @@ fieldset{
   text-align: center;
 }
 
+.veiButton{
+  width: 2px;
+  background-color: #282c34;
+}
+
+li {
+  margin: auto;
+  text-align: center;
+  width: 150px;
+}
+
 .Detalhes {
   width: 40%;
   margin: 10px;
