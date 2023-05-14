@@ -33,7 +33,6 @@ function App(){
   const [nascimento, setNascimento] = useState("");
   const [tipo, setTipo] = useState("usuarios");
   const [editMode, setEditMode] = useState(false);
-  const [open, setOpen] = useState(false)
 
   const collectionEnt = collection(db, "entregadores");
   const collectionUsu = collection(db, "usuarios");
@@ -281,18 +280,12 @@ function App(){
                 <summary>{ent.nome} | Id: {ent.id}</summary>
                 {ent.veiculos.map(vei => (
                 <details>
-                  <summary>{vei.marca} {vei.modelo}
-                    <Button color="primary">
-                      <EditNoteIcon/>
-                    </Button>
-                    <Button color="error">
-                      <Icon>delete_forever</Icon>
-                    </Button>
-                  </summary>
+                  <summary>{vei.marca} {vei.model}</summary>
                   <ul>
                       <li>{vei.marca}</li>
                       <li>{vei.modelo}</li>
                       <li>{vei.cilindradas} cilindradas</li>
+                      <li>Placa: {vei.placa}</li>
                       <li>Ano: {vei.ano}</li>
                   </ul>
                 </details>
@@ -301,6 +294,7 @@ function App(){
             : ''}
         </div>
         ))}
+        
       </div>
 
     </div>
