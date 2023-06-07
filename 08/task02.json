@@ -1,0 +1,42 @@
+[
+    {
+        "descricao": "Samsung A9 2022 8GB Exynos 16Core",
+        "id_prod": 139,
+        "importado": false,
+        "nome": "Samsumg A9 - 2022",
+        "preco": 4900,
+        "qtd_estoque": 20
+    },
+    {
+        "descricao": "I9 8200HQ 16GBMen GTX2060m SSD 1TB",
+        "id_prod": 140,
+        "importado": false,
+        "nome": "Notebook DELL Inspiron 17",
+        "preco": 12500,
+        "qtd_estoque": 210
+    },
+    {
+        "descricao": "x86-64 AMD Jaguar 8 núcleos",
+        "id_prod": 141,
+        "importado": false,
+        "nome": "Playstation 4",
+        "preco": 2200,
+        "qtd_estoque": 140
+    },
+    {
+        "descricao": "Bluetooth v2.1 EDR USB Classe HID USB Classe Áudio",
+        "id_prod": 142,
+        "importado": false,
+        "nome": "Dualshock 4",
+        "preco": 350,
+        "qtd_estoque": 100
+    },
+    {
+        "descricao": "SSD SAMSUNG EVO 980 2TB",
+        "id_prod": 143,
+        "importado": false,
+        "nome": "SSD 2,5TB",
+        "preco": 4150,
+        "qtd_estoque": 150
+    }
+]
