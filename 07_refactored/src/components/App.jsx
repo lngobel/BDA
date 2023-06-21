@@ -1,14 +1,12 @@
 import { useEffect, useState } from 'react';
-import { collection, getDocs, onSnapshot, updateDoc, doc, addDoc, deleteDoc, getFirestore, getDoc, setDoc } from "firebase/firestore";
+import { collection, getDocs, onSnapshot, updateDoc, doc, addDoc, deleteDoc, getFirestore } from "firebase/firestore";
 import firebaseConfig from "../firebase/config"
 import { initializeApp } from 'firebase/app'
-import * as React from 'react';
 import '../assets/styles/App.css';
 import { Entregadores } from './Entregadores';
 import { Usuarios } from './Usuarios';
 import { Veiculos } from './Veiculos';
 import { Form } from './Form';
-import { FormControl, InputLabel, Input, FormLabel, FormControlLabel, RadioGroup, Button, Radio } from "@mui/material"
 
 function App(){
 
@@ -20,19 +18,12 @@ function App(){
 
   const [entregador, setEntregador] = useState({})
   const [entregadores, setEntregadores] = useState([])
-  const [veiculos, setVeiculos] = useState({})
-  const [veiculo, setVeiculo] = useState({})
   const [usuario, setUsuario] = useState({})
   const [usuarios, setUsuarios] = useState([])
   const [nome, setNome] = useState("")
   const [cpf, setCpf] = useState("")
   const [email, setEmail] = useState("")
   const [nascimento, setNascimento] = useState("")
-  const [id, setId] = useState ("")
-  const [marca, setMarca] = useState("")
-  const [modelo, setModelo] = useState("")
-  const [cilindradas, setCilindradas] = useState("")
-  const [ano,setAno] = useState("")
   const [tipo, setTipo] = useState("usuarios")
   const [editMode, setEditMode] = useState(false)
   
