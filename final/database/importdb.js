@@ -8,8 +8,8 @@ try {
 
     if (!produtos) throw Error('Arquivo não encontrado!!')
 
-    const mongoDb = client.db("loja")
-    const mongoCollection = mongoDb.collection("produtos")
+    const mongoDb = client.db("bda")
+    const mongoCollection = mongoDb.collection("corridas")
     const result = await mongoCollection.insertMany(produtos)
 
     if (result.insertedCount == 0)

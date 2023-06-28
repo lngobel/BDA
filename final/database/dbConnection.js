@@ -3,7 +3,7 @@ import { MongoClient } from 'mongodb'
 const server = "localhost"
 
 const port = "27017"
-const db = "loja"
+const db = "bda"
 const uri = `mongodb://${server}:${port}/${db}`;
 
 const client = new MongoClient(uri);
