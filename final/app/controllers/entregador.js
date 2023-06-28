@@ -18,10 +18,7 @@ const index = async (req, res) => {
 }
 
 const show = async (req, res) => {
-    console.log(req.params.id)
-    console.log(req.body)
     const entregador = await model.getEntregadorById(req.params.id)
-    console.log(entregador)
     !entregador && res.status(404);
     res.send(entregador)
 }

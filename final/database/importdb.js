@@ -9,7 +9,7 @@ try {
     if (!produtos) throw Error('Arquivo não encontrado!!')
 
     const mongoDb = client.db("bda")
-    const mongoCollection = mongoDb.collection("corridas")
+    const mongoCollection = mongoDb.collection("usuarios")
     const result = await mongoCollection.insertMany(produtos)
 
     if (result.insertedCount == 0)

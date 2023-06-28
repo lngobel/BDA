@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import entregadorRoute from './routes/entregador.js'
+import usuarioRoute from './routes/usuario.js'
 
 const app = express();
 const port = 3000;
@@ -26,3 +27,4 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/entregadores',entregadorRoute)
+app.use('/usuarios',usuarioRoute)

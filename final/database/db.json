@@ -1,79 +1,9 @@
 [
   {
-    "id_corrida": 1,
     "id_usu": 11,
-    "id_ent": 1,
-    "data": "2023-06-27",
-    "valor": 10.25
-  },
-  {
-    "id_corrida": 2,
-    "id_usu": 10,
-    "id_ent": 2,
-    "data": "2023-06-20",
-    "valor": 12.70
-  },
-  {
-    "id_corrida": 3,
-    "id_usu": 9,
-    "id_ent": 3,
-    "data": "2023-06-15",
-    "valor": 14.50
-  },
-  {
-    "id_corrida": 4,
-    "id_usu": 8,
-    "id_ent": 4,
-    "data": "2023-05-30",
-    "valor": 10.10
-  },
-  {
-    "id_corrida": 5,
-    "id_usu": 7,
-    "id_ent": 5,
-    "data": "2023-06-12",
-    "valor": 9.90
-  },
-  {
-    "id_corrida": 6,
-    "id_usu": 6,
-    "id_ent": 6,
-    "data": "2023-05-12",
-    "valor": 19.40
-  },
-  {
-    "id_corrida": 7,
-    "id_usu": 5,
-    "id_ent": 7,
-    "data": "2023-06-05",
-    "valor": 11.25
-  },
-  {
-    "id_corrida": 8,
-    "id_usu": 4,
-    "id_ent": 8,
-    "data": "2023-04-21",
-    "valor": 9.20
-  },
-  {
-    "id_corrida": 9,
-    "id_usu": 3,
-    "id_ent": 9,
-    "data": "2023-06-01",
-    "valor": 18.95
-  },
-  {
-    "id_corrida": 10,
-    "id_usu": 2,
-    "id_ent": 10,
-    "data": "2023-05-26",
-    "valor": 15.80
-  },
-  {
-    "id_corrida": 11,
-    "id_usu": 1,
-    "id_ent": 11,
-    "data": "2023-05-16",
-    "valor": 17.65
+    "nome": "Neusa",
+    "nascimento": 1989,
+    "cpf": "000.111.222-33",
+    "email": "neusa@email.com"
   }
 ]
