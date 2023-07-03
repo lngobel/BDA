@@ -1,5 +1,7 @@
 # Documentação da API
 
+### Cliente HTTP utilizado: Postman
+
 ## COLEÇÃO: ENTREGADORES
 
 ### Retornar todos os entregadores
