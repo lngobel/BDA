@@ -1,17 +1,7 @@
 import { client, db } from '../../database/dbConnection.js'
 
 const collection = client.db(db).collection('produtos')
-/**
- * Retorna produtos ordenados de acordo com o campo definido em orderBy
- * e ordenados na ordem definida por reverse, se verdadeiro ordem reversa (ASC)
- * Rotas da API:
- * GET /produtos
- * GET /produtos?order=${campo}&reverse=${valor}
- * 
- * @param {*} orderBy campo a ser utilizado na ordenacao
- * @param {*} reverse booleano para a determinar a ordem ascendente (true) ou descendente (false)
- * @returns Array de objetos Produto
- */
+
 const getAllProdutos = async (orderBy = 'id_prod', reverse = false) => {
     try {
         let resultados = []
@@ -28,13 +18,7 @@ const getAllProdutos = async (orderBy = 'id_prod', reverse = false) => {
     }
 }
 
-/**
- * Busca produto definido por id_prod igual ao campo id_prod
- * Rotas da API:
- *  GET /produtos/${id}
- * @param {*} id_prod ID do produto a ser retornado
- * @returns Retorna um objeto de Produto
- */
+
 const getProdutoById = async (idProd) => {
     try {
         let produto = {}
@@ -56,16 +40,7 @@ const getProdutoById = async (idProd) => {
     }
 }
 
-//Registra um novo produto no banco, 
-//retorna verdadeiro se inserido com sucesso
-//API - Testar com cliente HTTP
-/**
- * Rota da API:
- *  POST /produtos
- * 
- * @param {*} produto Objeto Produto com os campos a serem inseridos
- * @returns 
- */
+
 const insertProduto = async (produto) => {
     try {
         const result = await collection.insertOne(produto)
@@ -80,16 +55,7 @@ const insertProduto = async (produto) => {
     }
 }
 
-//Atualiza um produto no banco
-//retorna verdadeiro se atualizado com sucesso
-//API - Testar com cliente HTTP
-/**
- * Rota da API:
- *  PUT /produtos/${id}
- * 
- * @param {*} new_produto Objeto com os campos a serem atualizados
- * @returns booleano de confirmação
- */
+
 const updateProduto = async (new_produto) => {
     try {
         const result = await collection.updateOne(
@@ -109,15 +75,7 @@ const updateProduto = async (new_produto) => {
     }
 }
 
-//Remove um produto do banco
-//API - Testar com cliente HTTP
-/**
- * Rota da API:
- *  DELETE /produtos/${id}
- * 
- * @param {*} id_prod ID a ser excluído
- * @returns Booleano de confirmação
- */
+
 const deleteProduto = async (id_prod) => {
     try {
         const result = await collection.deleteOne({ id_prod: id_prod })
@@ -132,14 +90,7 @@ const deleteProduto = async (id_prod) => {
     }
 }
 
-//API - Testar com cliente HTTP
-/**
- * Rota da API: 
- *  DELETE /produtos/many
- * 
- * @param {*} ids Array de ids a serem excluídos
- * @returns Booleano para confirmar a exclusão
- */
+
 const deleteManyProdutos = async (ids) => {
     try {
         const result = await collection.deleteMany({ id_prod: { $in: ids } })
@@ -156,15 +107,7 @@ const deleteManyProdutos = async (ids) => {
     }
 }
 
-/** Filtra Produtos por termo de busca para o campo nome ou descricao 
- * Rotas da API:
- * GET /produtos?field=${campo}&search=${termo}
- * campo => nome || descricao
- * 
- * @param {*} field campo de busca (nome ou descricao)
- * @param {*} term termo de busca (palavra a ser encontrada)
- * @returns Array de objetos Produto
- */
+
 const getFilteredProdutos = async (field = 'nome', term = '') => {
     try {
         let resultados = []
@@ -185,15 +128,8 @@ const getFilteredProdutos = async (field = 'nome', term = '') => {
         return false;
     }
 }
-/**
- * Rota da API:
- * GET /produtos/filter_price/?greater=${min}&less=${max}
- * Parametros:
- * @param {*} greater valor inicial do intervalor
- * @param {*} less valor final do intervalo
- * @param {*} sort ordenar por maior ou menor preco (1,-1)
- * @returns Array de objetos Produto
- */
+
+
 const getProdutosPriceRange = async (min = 0, max = 0, sort = 1) => {
     try {
         let resultados = []
