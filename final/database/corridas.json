@@ -1,0 +1,82 @@
+[
+    {
+      "_id": "649b9a65d3c723569823eabd",
+      "id_corrida": 1,
+      "id_usu": 11,
+      "id_ent": 1,
+      "data": "2023-06-27",
+      "valor": 10.25
+    },
+    {
+      "_id": "649b9a65d3c723569823eabe",
+      "id_corrida": 2,
+      "id_usu": 10,
+      "id_ent": 2,
+      "data": "2023-06-20",
+      "valor": 12.7
+    },
+    {
+      "_id": "649b9a65d3c723569823eabf",
+      "id_corrida": 3,
+      "id_usu": 9,
+      "id_ent": 3,
+      "data": "2023-06-15",
+      "valor": 14.5
+    },
+    {
+      "_id": "649b9a65d3c723569823eac0",
+      "id_corrida": 4,
+      "id_usu": 8,
+      "id_ent": 4,
+      "data": "2023-05-30",
+      "valor": 10.1
+    },
+    {
+      "_id": "649b9a65d3c723569823eac1",
+      "id_corrida": 5,
+      "id_usu": 7,
+      "id_ent": 5,
+      "data": "2023-06-12",
+      "valor": 9.9
+    },
+    {
+      "_id": "649b9a65d3c723569823eac2",
+      "id_corrida": 6,
+      "id_usu": 6,
+      "id_ent": 6,
+      "data": "2023-05-12",
+      "valor": 19.4
+    },
+    {
+      "_id": "649b9a65d3c723569823eac3",
+      "id_corrida": 7,
+      "id_usu": 5,
+      "id_ent": 7,
+      "data": "2023-06-05",
+      "valor": 11.25
+    },
+    {
+      "_id": "649b9a65d3c723569823eac4",
+      "id_corrida": 8,
+      "id_usu": 4,
+      "id_ent": 8,
+      "data": "2023-04-21",
+      "valor": 9.2
+    },
+    {
+      "_id": "649b9a65d3c723569823eac5",
+      "id_corrida": 9,
+      "id_usu": 3,
+      "id_ent": 9,
+      "data": "2023-06-01",
+      "valor": 18.95
+    },
+    {
+      "_id": "649b9a65d3c723569823eac6",
+      "id_corrida": 10,
+      "id_usu": 2,
+      "id_ent": 10,
+      "data": "2023-05-26",
+      "valor": 15.8
+    }
+  ]

@@ -1,0 +1,82 @@
+[
+    {
+      "_id": "649bd3dd3a125877996d27f5",
+      "id_usu": 1,
+      "nome": "Maria",
+      "nascimento": 1996,
+      "cpf": "000.111.222-33",
+      "email": "maria@email.com"
+    },
+    {
+      "_id": "649bd3dd3a125877996d27f6",
+      "id_usu": 2,
+      "nome": "Ana",
+      "nascimento": 1997,
+      "cpf": "000.111.222-33",
+      "email": "ana@email.com"
+    },
+    {
+      "_id": "649bd3dd3a125877996d27f7",
+      "id_usu": 3,
+      "nome": "Joana",
+      "nascimento": 1995,
+      "cpf": "000.111.222-33",
+      "email": "joana@email.com"
+    },
+    {
+      "_id": "649bd3dd3a125877996d27f8",
+      "id_usu": 4,
+      "nome": "Paula",
+      "nascimento": 1994,
+      "cpf": "000.111.222-33",
+      "email": "paula@email.com"
+    },
+    {
+      "_id": "649bd3dd3a125877996d27f9",
+      "id_usu": 5,
+      "nome": "Elizabeth",
+      "nascimento": 1998,
+      "cpf": "000.111.222-33",
+      "email": "elizabeth@email.com"
+    },
+    {
+      "_id": "649bd3dd3a125877996d27fa",
+      "id_usu": 6,
+      "nome": "Marisa",
+      "nascimento": 1999,
+      "cpf": "000.111.222-33",
+      "email": "marisa@email.com"
+    },
+    {
+      "_id": "649bd3dd3a125877996d27fb",
+      "id_usu": 7,
+      "nome": "Laura",
+      "nascimento": 1993,
+      "cpf": "000.111.222-33",
+      "email": "laura@email.com"
+    },
+    {
+      "_id": "649bd3dd3a125877996d27fc",
+      "id_usu": 8,
+      "nome": "Clara",
+      "nascimento": 1992,
+      "cpf": "000.111.222-33",
+      "email": "clara@email.com"
+    },
+    {
+      "_id": "649bd3dd3a125877996d27fd",
+      "id_usu": 9,
+      "nome": "Teresa",
+      "nascimento": 1991,
+      "cpf": "000.111.222-33",
+      "email": "teresa@email.com"
+    },
+    {
+      "_id": "649bd3dd3a125877996d27fe",
+      "id_usu": 10,
+      "nome": "Cleusa",
+      "nascimento": 1990,
+      "cpf": "000.111.222-33",
+      "email": "cleusa@email.com"
+    }
+  ]
